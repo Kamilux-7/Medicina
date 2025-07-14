@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Malla Medicina</title>
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+  </head>
+  <body>
+    <h1>Malla Curricular Medicina - Udelar</h1>
+    <div class="mermaid">
+      graph TD
+        ING[Requisitos de Ingreso]
+        ING --> MIBCM[MIBCM - Introducción a la Biología Celular y Molecular]
+        ING --> MIBES[MIBES - Introducción a la Bioestadística]
+        ING --> MSPHB[MSPHB - Salud, Humanidades y Bioética]
+        MSPHB --> MAT1[MAT1 - Aprendizaje en Territorio 1]
+        MIBCM --> MBCM[MBCM - Biología Celular y Molecular]
+        MAT1 --> MAT2[MAT2 - Aprendizaje en Territorio 2]
+        MSPHB --> MANAT[MANAT - Anatomía]
+        MBCM --> MHBIO[MHBIO - Histología y Biofísica]
+        MBCM --> HIST[HIST - Histología (neuro y cardio)]
+        MBCM --> BCC3N[BCC3N - Neurociencias]
+        MBCM --> BCC4C[BCC4C - Cardio y Respiratorio]
+        MANAT & MBCM --> BCC5[BCC5 - Digestivo, Renal, Metab. y Repr.]
+        MBCM --> BCC6[BCC6 - Hematología e Inmunobiología]
+        MIBES & MBCM --> MC1[MC1 - Metodología Científica 1]
+        MBCM & MANAT & MAT2 & BCC3N & BCC4C & BCC5 & BCC6 & MC1 --> M4PNA[M4PNA - Medicina en el Primer Nivel de Atención]
+        M4PNA --> M4BCP[M4BCP - Bases Científicas de la Patología]
+        M4BCP --> M4PED[M4PED - Pediatría]
+        M4BCP --> M4GYN[M4GYN - Ginecología y Neonatología]
+        M4PNA & M4BCP --> MCM[MCM - Clínica Médica]
+        M4BCP --> MPMT[MPMT - Patología Médica y Terapéutica]
+        M4PNA & M4BCP --> M6CQ[M6CQ - Clínica Quirúrgica]
+        M4BCP --> M6PQ[M6PQ - Patología Quirúrgica]
+        M4PNA --> M6MFC[M6MFC - Salud Mental en Comunidad]
+    </div>
+  </body>
+</html>
